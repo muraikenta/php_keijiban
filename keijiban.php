@@ -76,9 +76,9 @@ if ($isPass) {
 
 
 // データベース接続
-$dsn = "mysql:dbname=keijiban;host=localhost";
-$user = "root";
-$password = "root";
+$dsn = "mysql:dbname=keijiban;host=keijiban.azurewebsites.net";
+$user = "b23176e08da199";
+$password = "18bf0b2b";
 try {
 	$dbh = new PDO($dsn,$user,$password);
 	$dbh->query("SET NAMES UTF-8");
