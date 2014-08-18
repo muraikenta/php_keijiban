@@ -76,7 +76,7 @@ if ($isPass) {
 
 
 // データベース接続
-$dsn = "mysql:dbname=keijiban;host=keijiban.azurewebsites.net";
+$dsn = "mysql:dbname=keijiban;host=138.91.17.26";
 $user = "b23176e08da199";
 $password = "18bf0b2b";
 try {
