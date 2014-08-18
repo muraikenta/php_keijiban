@@ -115,7 +115,7 @@ $hyouji=max($start-5,-1);
 for ($i = $start; $i>$hyouji  ; $i--) {
 	echo "No.{$result[$i]['id']}　";
 	echo "名前：{$result[$i]['name']}　";
-	echo "件名：{$result[$i]['kenmei']}";
+	echo "件名：{$result[$i]['kenmei']}<br>";
 	//echo "<a style='float:right' href='delete.php?id={$result[$i]['id']}'><input type='button' value='✕'></a><br/>";
 	echo "{$result[$i]['content']}<br/><hr/>";
 }
