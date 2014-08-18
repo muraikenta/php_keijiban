@@ -3,17 +3,17 @@
 	$user_name = $_POST["user_name"];
 	$user_password = $_POST["password"];
 
-	// データベース接続
-	$dsn = "mysql:dbname=keijiban;host=localhost";
-	$user = "root";
-	$password = "root";
-	try {
-		$dbh = new PDO($dsn,$user,$password);
-		$dbh->query("SET NAMES UTF-8");
-	} catch (PDOException $e) {
-		var_dump($e->getMessage());
-		exit;
-	}
+// データベース接続
+$dsn = "mysql:dbname=keijiban;host=138.91.17.26";
+$user = "b23176e08da199";
+$password = "18bf0b2b";
+try {
+	$dbh = new PDO($dsn,$user,$password);
+	$dbh->query("SET NAMES UTF-8");
+} catch (PDOException $e) {
+	var_dump($e->getMessage());
+	exit;
+}
 
 
 	// データベースからデータを取り出す

@@ -6,9 +6,10 @@ if(isset($_SESSION["id"])){
 	$id=null;
 }
 
-$dsn = "mysql:dbname=keijiban;host=localhost";
-$user = "root";
-$password = "root";
+// データベース接続
+$dsn = "mysql:dbname=keijiban;host=138.91.17.26";
+$user = "b23176e08da199";
+$password = "18bf0b2b";
 try {
 	$dbh = new PDO($dsn,$user,$password);
 	$dbh->query("SET NAMES UTF-8");
@@ -16,6 +17,7 @@ try {
 	var_dump($e->getMessage());
 	exit;
 }
+
 if ($id!=null) {
 	$stmt = $dbh->prepare("delete from keijiban where id = $id");
 	$stmt->execute();

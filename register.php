@@ -5,9 +5,9 @@
 	if (!empty($user_name) && !empty($user_password))
 	{
 		// データベース接続
-		$dsn = "mysql:dbname=keijiban;host=localhost";
-		$user = "root";
-		$password = "root";
+		$dsn = "mysql:dbname=keijiban;host=138.91.17.26";
+		$user = "b23176e08da199";
+		$password = "18bf0b2b";
 		try {
 			$dbh = new PDO($dsn,$user,$password);
 			$dbh->query("SET NAMES UTF-8");
@@ -16,14 +16,14 @@
 			exit;
 		}
 
-	// データベースへの挿入
-	$stmt = $dbh->prepare('INSERT INTO user(name,password) VALUES(\''.$user_name.'\',\''.md5($user_password).'\')');
-	$stmt->execute();
+		// データベースへの挿入
+		$stmt = $dbh->prepare('INSERT INTO user(name,password) VALUES(\''.$user_name.'\',\''.md5($user_password).'\')');
+		$stmt->execute();
 
-	$dbh = null;
-	$_SESSION['login'] = 1;
-	$_SESSION['name'] = $user_name;
-	header('Location: keijiban.php');
+		$dbh = null;
+		$_SESSION['login'] = 1;
+		$_SESSION['name'] = $user_name;
+		header('Location: keijiban.php');
 	}
 
  ?>
